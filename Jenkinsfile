@@ -34,6 +34,7 @@ pipeline{
 			        {
 					agent{
 						docker{
+							reuseNode false
 							image 'ubuntu'
 						     }
 					     }
