@@ -30,6 +30,18 @@ pipeline{
 				             }
 
 			           }
+			   stage('Four')
+			        {
+					agent{
+						docker{
+							image 'ubuntu'
+						     }
+					     }
+                                     steps{
+                                            echo 'testing'
+				           }
+
+			        }
  		
             }
 }
