@@ -32,12 +32,6 @@ pipeline{
 			           }
 			   stage('Four')
 			        {
-					agent{
-						docker{
-							reuseNode true
-							image 'ubuntu'
-						     }
-					     }
                                      steps{
                                             echo 'testing'
 				           }
