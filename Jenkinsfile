@@ -6,23 +6,28 @@ pipeline{
       stages{
  		      stage('One')
 		          	{
-                      steps{
-                       echo "Hi"
-	                   }
+                                   steps{
+                                    echo "Hi"
+	                                }
                               }
 			
  		        stage('Two')
 			        {
-                            steps{
-                               input( "Are you fine?")
-				 }
+                                     steps{
+                                            input( "Are you fine?")
+				           }
 
 			        }
  		          stage('Three')
 			          {
-                            steps{
-                               echo "Hello"
-				  }
+					  when{
+					    not{
+						    branch 'master'
+					       }
+					     }
+                                           steps{
+                                              echo "Hello"
+				             }
 
 			           }
  		
