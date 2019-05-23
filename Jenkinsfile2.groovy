@@ -14,7 +14,7 @@ pipeline{
  		        stage('Two')
 			             {
                                      steps{
-                                            build 'decpipe1'
+                                            build 'first'
                                             }
 				           }
 
