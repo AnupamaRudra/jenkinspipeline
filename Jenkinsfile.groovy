@@ -14,23 +14,14 @@ pipeline{
  		        stage('Two')
 			        {
                                      steps{
-                                            input( "Are you fine?")
+                                            input( "Is the previous build successful?")
 				           }
 
 			        }
- 		          stage('Three')
-			          {
-					  when{
-					    not{
-						    branch 'master'
-					       }
-					     }
-                                           steps{
-                                              echo "Hello"
-				             }
+ 		         
 
 			           }
-			   stage('Four')
+			   stage('Three')
 			        {
 					agent{
 						docker{
